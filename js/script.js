@@ -38,4 +38,19 @@ window.addEventListener('DOMContentLoaded', function() {
             });
 		}
 	});
+    //Timer
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 });
