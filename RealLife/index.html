@@ -61,6 +61,30 @@
 							</p>
 						</article>
 
+						<!-- Timer -->
+
+						<div class="promotion__timer">
+							<div class="title"><b>Таймер отсчета времени до запуска</b></div>
+							<div class="timer">
+								<div class="timer__block">
+									<span id="days">12</span>
+									дней
+								</div>
+								<div class="timer__block">
+									<span id="hours">20</span>
+									часов
+								</div>
+								<div class="timer__block">
+									<span id="minutes">56</span>
+									минут
+								</div>
+								<div class="timer__block">
+									<span id="seconds">20</span>
+									секунд
+								</div>
+							</div>
+						</div>
+
 					<!-- Post -->
 						<article class="box post post-excerpt">
 							<header>
@@ -106,15 +130,19 @@
 			<div id="sidebar">
 
 				<!-- Logo -->
-					<h1 id="logo"><a href="#">STRIPED</a></h1>
+					<h1 id="logo"><a href="#">PORTFOLIO</a></h1>
+
+					<!-- Button -->
+
+					<button class="open-btn"> OPEN </button>
 
 				<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li class="current"><a href="#">Latest Post</a></li>
-							<li><a href="#">Archives</a></li>
-							<li><a href="#">About Me</a></li>
-							<li><a href="#">Contact Me</a></li>
+					<nav class="nav">
+						<ul class="nav-header">
+							<li class="nav-item">Main</li>
+							<li class="nav-item">Photos</li>
+							<li class="nav-item">Texts</li>
+							<li class="nav-item">Poetry</li>
 						</ul>
 					</nav>
 
@@ -129,8 +157,8 @@
 					<section class="box text-style1">
 						<div class="inner">
 							<p>
-								<strong>Striped:</strong> A free and fully responsive HTML5 site
-								template designed by <a href="http://twitter.com/ajlkn">AJ</a> for <a href="http://html5up.net/">HTML5 UP</a>
+								<strong>Striped:</strong> 
+								template designed by <a>Author</a> for <a>ALL</a>
 							</p>
 						</div>
 					</section>
@@ -225,17 +253,32 @@
 
 				<!-- Copyright -->
 					<ul id="copyright">
-						<li>&copy; Untitled.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; Leonid Fedorets.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 					</ul>
 
 			</div>
 
+			<!-- Modal -->
+
+			<div class="modal">
+				<div class="modal__dialog">
+					<div class="modal__content">
+						<form action="#">
+							<div class="modal__close" data-close>&times;</div>
+							<div class="modal__title">Support request</div>
+							<input required placeholder="Name" name="name" type="text" class="modal__input">
+							<input required placeholder="Phone" name="phone" type="phone" class="modal__input">
+							<button class="btn btn_dark btn_min">Confirm</button>
+						</form>
+					</div>
+				</div>
+			</div>
+
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="assets/js/timer.js"></script>
+			<script src="assets/js/modal.js"></script>
+			<script src="assets/js/tabs.js"></script>
+
 
 	</body>
 </html>
