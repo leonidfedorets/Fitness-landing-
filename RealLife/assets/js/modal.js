@@ -35,7 +35,7 @@ if (e.code === "Escape" && modal.classList.contains('show')) {
 }
 });
 
-// const modalTimerId = setTimeout(openModal, 3000);
+const modalTimerId = setTimeout(openModal, 3000);
 // Закомментировал, чтобы не отвлекало
 
 function showModalByScroll() {
