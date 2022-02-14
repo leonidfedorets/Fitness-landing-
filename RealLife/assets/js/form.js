@@ -4,16 +4,38 @@ window.addEventListener('DOMContentLoaded', function() {
 
  const forms = document.querySelectorAll('form');
  const message = {
-     loading: 'assets/css/images/spinner.svg',
+     loading: 'img/form/spinner.svg',
      success: 'Спасибо! Скоро мы с вами свяжемся',
      failure: 'Что-то пошло не так...'
  };
 
  forms.forEach(item => {
-     postData(item);
+     bindPostData(item);
  });
 
- function postData(form) {
+ const postData = async (url, data) => {
+     let res = await fetch(url, {
+         method: "POST",
+         headers: {
+             'Content-Type': 'application/json'
+         },
+         body: data
+     });
+ 
+     return await res.json();
+ };
+
+ async function getResource(url) {
+     let res = await fetch(url);
+ 
+     if (!res.ok) {
+         throw new Error(`Could not fetch ${url}, status: ${res.status}`);
+     }
+ 
+     return await res.json();
+ }
+
+ function bindPostData(form) {
      form.addEventListener('submit', (e) => {
          e.preventDefault();
 
@@ -27,18 +49,10 @@ window.addEventListener('DOMContentLoaded', function() {
      
          const formData = new FormData(form);
 
-         const object = {};
-         formData.forEach(function(value, key){
-             object[key] = value;
-         });
+         const json = JSON.stringify(Object.fromEntries(formData.entries()));
 
-         fetch('server.php', {
-             method: 'POST',
-             headers: {
-                 'Content-Type': 'application/json'
-             },
-             body: JSON.stringify(object)
-         }).then(data => {
+         postData('http://localhost:3000/requests', json)
+         .then(data => {
              console.log(data);
              showThanksModal(message.success);
              statusMessage.remove();
