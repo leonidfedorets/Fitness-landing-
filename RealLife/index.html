@@ -11,7 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
-	<body class="is-preload">
+	<body onload="displayCalendar()" class="is-preload">
 
 		<!-- Content -->
 			<div id="content">
@@ -32,7 +32,7 @@
 								
 
 						<!-- INFO -->
-
+<!-- 
 							<div class="info">
 								<!--
 									Note: The date should be formatted exactly as it's shown below. In particular, the
@@ -42,17 +42,17 @@
 									the entire "date" element.
 
 								-->
-								<span class="date"><span class="month">Jul<span>y</span></span> <span class="day">14</span><span class="year">, 2014</span></span>
+								<!-- <span class="date"><span class="month">Jul<span>y</span></span> <span class="day">14</span><span class="year">, 2014</span></span>
 								<!--
 									Note: You can change the number of list items in "stats" to whatever you want.
 								-->
-								<ul class="stats">
+								<!-- <ul class="stats">
 									<li><a href="#" class="icon fa-comment">16</a></li>
 									<li><a href="#" class="icon fa-heart">32</a></li>
 									<li><a href="#" class="icon brands fa-twitter">64</a></li>
 									<li><a href="#" class="icon brands fa-facebook-f">128</a></li>
-								</ul>
-							</div>
+								</ul> -->
+							<!-- </div> -->
 							<!-- Timer -->
 
 						<div class="promotion__timer">
@@ -97,7 +97,7 @@
 							</div>
 							
 							<!-- Paragraph -->
-							<p>
+							<!-- <p>
 								<strong>Hello!</strong> You're looking at <strong>Striped</strong>, a fully responsive HTML5 site template designed by <a href="http://twitter.com/ajlkn">AJ</a>
 								for <a href="http://html5up.net">HTML5 UP</a> It features a clean, minimalistic design, styling for all basic page elements (including blockquotes, tables and lists), a
 								repositionable sidebar (left or right), and HTML5/CSS3 code designed for quick and easy customization (see code comments for details).
@@ -107,12 +107,118 @@
 								or even commercial ones &ndash; just be sure to credit <a href="http://html5up.net">HTML5 UP</a> for the design. If you like what you see here, be sure to check out
 								<a href="http://html5up.net">HTML5 UP</a> for more cool designs or follow me on <a href="http://twitter.com/ajlkn">Twitter</a> for new releases and updates.
 							</p>
-						</article>
+						</article> -->
 
+					<!-- Slider -->
+
+					<div class="offer__slider">
+						<div class="offer__slider-counter">
+							<div class="offer__slider-prev">
+								<img src="images/left.svg" alt="prev">
+							</div>
+							<span id="current">03</span>
+							/
+							<span id="total">04</span>
+							<div class="offer__slider-next">
+								<img src="images/right.svg" alt="next">
+							</div>
+						</div>
+						<div class="offer__slider-wrapper">
+							<div class="offer__slider-inner">
+							<div class="offer__slide">
+								<img src="images/DSC_0131.JPG" alt="pepper">
+							</div>
+							<div class="offer__slide">
+								<img src="images/DSC_0143.JPG" alt="food">
+							</div>
+							<div class="offer__slide">
+								<img src="images/DSC_0152.JPG" alt="oil">
+							</div>
+							<div class="offer__slide">
+								<img src="images/DSC_0158.JPG" alt="paprika">
+							</div>
+							<div class="offer__slide">
+								<img src="images/DSC_0160.JPG" alt="pap">
+							</div>
+						</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="cardo">
+					<form>
 					
+						CREATE CARD
+					</form>
+					
+					</div>
+
+					<!-- Calc -->
+
+					<div class="calculating">
+						<div class="container">
+							<h2 class="title">Mining Profitability Calculator
+							</h2>
+							<div class="calculating__field">
+								<div class="calculating__subtitle">
+									Day/Months
+								</div>
+								<div class="calculating__choose" id="gender">
+									<div id="female" class="calculating__choose-item calculating__choose-item_active">Day</div>
+									<div id="male" class="calculating__choose-item">Month</div>
+								</div>
+				
+								<div class="calculating__subtitle">
+									Paramenters
+								</div>
+								<div class="calculating__choose calculating__choose_medium">
+									<input type="text" id="height" placeholder="Earning per 1 TH/s (BTC)" class="calculating__choose-item">
+									<input type="text" id="weight" placeholder="Electricity Cost, $"  class="calculating__choose-item">
+									<input type="text" id="age" placeholder="Qantity of Devices " class="calculating__choose-item">
+									<input type="text" id="rate" placeholder="BTC to USD rate " class="calculating__choose-item">
+								</div>
+				
+								<div class="calculating__subtitle">
+									Choose the Device Model
+								</div>
+								<div class="calculating__choose calculating__choose_big">
+									<div data-ratio="70" id="low" class="calculating__choose-item">Whatsminer M20s </div>
+									<div data-ratio="80" id="small"  class="calculating__choose-item calculating__choose-item_active">Whatsminer M31s</div>
+									<div data-ratio="88" id="medium" class="calculating__choose-item">Whatsminer M30s</div>
+									<div data-ratio="95" id="high" class="calculating__choose-item">Antminer S19</div>
+									<div data-ratio="110" id="highest" class="calculating__choose-item">Antminer S19 pro</div>
+								</div>
+				
+								<div class="calculating__divider"></div>
+				
+								<div class="calculating__total">
+									<div class="calculating__subtitle">
+										Your Net Profit:
+									</div>
+									<div class="calculating__result">
+										<span>100</span> USD ($)
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="pagination">
+						<!--<a href="#" class="button previous">Previous Page</a>-->
+						<div class="pages">
+							<a href="#" class="active">1</a>
+							<a href="#">2</a>
+							<a href="#">3</a>
+							<a href="#">4</a>
+							<span>&hellip;</span>
+							<a href="#">20</a>
+						</div>
+						<a href="#" class="button next">Next Page</a>
+					</div>
+
+			</div>
 
 					<!-- Post -->
-						<article class="box post post-excerpt">
+						<!-- <article class="box post post-excerpt">
 							<header>
 								<h2><a href="#">Lorem ipsum dolor sit amet</a></h2>
 								<p>Feugiat interdum sed commodo ipsum consequat dolor nullam metus</p>
@@ -133,21 +239,10 @@
 								Quisque vel sapien sit amet tellus elementum ultricies. Nunc vel orci turpis. Donec id malesuada metus.
 								Nunc nulla velit, fermentum quis interdum quis, convallis eu sapien. Integer sed ipsum ante.
 							</p>
-						</article>
+						</article> -->
 
 					<!-- Pagination -->
-						<div class="pagination">
-							<!--<a href="#" class="button previous">Previous Page</a>-->
-							<div class="pages">
-								<a href="#" class="active">1</a>
-								<a href="#">2</a>
-								<a href="#">3</a>
-								<a href="#">4</a>
-								<span>&hellip;</span>
-								<a href="#">20</a>
-							</div>
-							<a href="#" class="button next">Next Page</a>
-						</div>
+					
 
 				</div>
 			</div>
@@ -156,12 +251,13 @@
 			<div id="sidebar">
 
 				<!-- Logo -->
-					<h1 id="logo"><a href="#">PORTFOLIO</a></h1>
+					<h1 id="logo">Leonid Fedorets Inc.</h1>
+					<img class="fenix" src="images/Logo1.png"></img>
 
 					<!-- Button -->
-
+<div class="logob">
 					<button class="open-btn"> SEND REQUEST </button>
-
+				</div>
 				<!-- Nav -->
 					<nav class="nav">
 						<ul class="nav-header">
@@ -216,9 +312,18 @@
 					</section>
 
 				<!-- Calendar -->
-					<section class="box calendar">
-						<div class="inner">
-							<table>
+					<!-- <section class="box calendar"> -->
+						<!-- <div class="inner">
+							<caption> -->
+								
+								<div class="calendar-wrapper">
+									<button id="btnPrev" type="button">Prev</button>
+									<button id="btnNext" type="button">Next</button>
+									<div id="divCal"></div>
+								  </div>
+							
+							
+							<!-- <table>
 								<caption>July 2014</caption>
 								<thead>
 									<tr>
@@ -241,17 +346,17 @@
 									<tr>
 										<td><span>4</span></td>
 										<td><span>5</span></td>
-										<td><a href="#">6</a></td>
+										<td><span>6</span></td>
 										<td><span>7</span></td>
 										<td><span>8</span></td>
 										<td><span>9</span></td>
-										<td><a href="#">10</a></td>
+										<td><span>10</span></td>
 									</tr>
 									<tr>
 										<td><span>11</span></td>
 										<td><span>12</span></td>
 										<td><span>13</span></td>
-										<td class="today"><a href="#">14</a></td>
+										<td><span>14</span></td>
 										<td><span>15</span></td>
 										<td><span>16</span></td>
 										<td><span>17</span></td>
@@ -262,24 +367,24 @@
 										<td><span>20</span></td>
 										<td><span>21</span></td>
 										<td><span>22</span></td>
-										<td><a href="#">23</a></td>
+										<td><span>23</span></td>
 										<td><span>24</span></td>
 									</tr>
 									<tr>
-										<td><a href="#">25</a></td>
+										<td><span>25</span></td>
 										<td><span>26</span></td>
 										<td><span>27</span></td>
 										<td><span>28</span></td>
 										<td class="pad" colspan="3"><span>&nbsp;</span></td>
 									</tr>
-								</tbody>
-							</table>
-						</div>
-					</section>
+								</tbody> -->
+						
+						<!-- </div> -->
+					<!-- </section> -->
 
 				<!-- Copyright -->
 					<ul id="copyright">
-						<li>&copy; Leonid Fedorets.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; Leonid Fedorets.</li><li>All details: <a href="http://lelikfoot.zzz.com.ua/Leo2"/>Leonid Fedorets Art Gallery</a></li>
 					</ul>
 
 			</div>
@@ -301,10 +406,16 @@
 			</div>
 
 		<!-- Scripts -->
+		<script src="assets/js/calendar.js"></script>
 			<script src="assets/js/timer.js"></script>
 			<script src="assets/js/modal.js"></script>
 			<script src="assets/js/tabs.js"></script>
 			<script src="assets/js/form.js"></script>
+			<script src="assets/js/slider.js"></script>
+			<script src="assets/js/date.js"></script>
+			<script src="assets/js/calculator.js"></script>
+			
+			
 
 
 	</body>
