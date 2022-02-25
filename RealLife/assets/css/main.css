@@ -3242,3 +3242,21 @@ thead td {
 	width: 350px;
 	height: 150px;
 }
+.graph {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+#myChart{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+#regions_div {
+	margin-top: 20px;
+}
+#btn-canvas {
+	margin-bottom: 20px;
+}
+#btn-canvas-active {
+	border:#c94663;
+	background-color: green
+}
